@@ -1,12 +1,4 @@
-// Image Replaste, by Misha Heesakkers — Source code available at ....
-
-// ## Code
-// ### Defining The Run Handler
-//
-// In the manifest, we told Sketch that every time the "Image Replaste!" menu is selected,
-// we want to execute  a javascript handler called `onRun`.
-//
-// So now we need to put some code into the `image-replaste.js` file to implement that command.
+// Image Replaste, by Misha Heesakkers
 
 function onRun(context) {
 
@@ -23,6 +15,9 @@ function onRun(context) {
 
     if (imgData || imgTiffData) {
       for (var i = 0; i < layersCount; i++){
+        
+        // To do: Check if layer is a shape or an image and fill or set image accordingly
+
         if (imgData) {
           replaceImage(selectedLayers[i], imgData);        
         } else if (imgTiffData) {
