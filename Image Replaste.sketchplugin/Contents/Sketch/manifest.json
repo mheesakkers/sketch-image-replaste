@@ -1,0 +1,17 @@
+{
+    "name" : "Image Replaste!",
+    "identifier" : "com.sketchapp.examples.image-replaste",
+    "version" : "0.1",
+    "description" : "Replace your image with your pasteboard image",
+    "authorEmail" : "misha.heesakkers@gmail.com",
+    "author" : "Misha Heesakkers",
+    "commands" : [
+    {
+      "script" : "image-replaste.js",
+      "handler" : "onRun",
+      "shortcut" : "cmd shift y",
+      "name" : "Image Replaste!",
+      "identifier" : "image-replaste"
+    }
+  ]
+}
