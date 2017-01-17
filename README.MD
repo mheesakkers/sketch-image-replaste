@@ -1,6 +1,15 @@
-# Image Replaste
+# Image Replaste (WIP)
 
 A simple Sketch plugin for replacing images with copied images of your clipboard.
+
+---
+
+##To do
+
+- If layer is not an image => fill the layer with the copied image
+- Testing
+- Add to Sketch Toolbox
+- SketchRunner integration
 
 ---
 
