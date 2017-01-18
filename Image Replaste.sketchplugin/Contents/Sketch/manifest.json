@@ -11,7 +11,9 @@
       "handler" : "onRun",
       "shortcut" : "cmd shift y",
       "name" : "Image Replaste!",
-      "identifier" : "image-replaste"
+      "identifier" : "image-replaste",
+      "description" : "Replace your image with your pasteboard image",
+      "icon" : "icon.png"
     }
   ]
 }

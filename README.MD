@@ -11,7 +11,7 @@ A simple Sketch plugin for replacing images with a copied image of your clipboar
 - Bug: Multiple selected image only one get replaced
 - Testing
 - Add to Sketch Toolbox
-- SketchRunner integration
+- ~~SketchRunner integration~~
 
 ---
 
@@ -33,3 +33,5 @@ A simple Sketch plugin for replacing images with a copied image of your clipboar
 4. Boom! Your image got replaced with your copied image 😎
 
 ---
+
+<a href="http://bit.ly/SketchRunnerWebsite"><img height="40" width="160" src="http://sketchrunner.com/img/badge_blue.png"></a>
