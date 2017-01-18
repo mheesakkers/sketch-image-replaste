@@ -14,15 +14,34 @@ function onRun(context) {
     var imgTiffData = pasteBoard.dataForType(NSPasteboardTypeTIFF);
 
     if (imgData || imgTiffData) {
-      for (var i = 0; i < layersCount; i++){
+      for (var i = 0; i < layersCount; i++) {
+        var layer = selectedLayers[i];
+        var image;
         
-        // To do: Check if layer is a shape or an image and fill or set image accordingly
+        // Check if layer is a shape or image
+        if (layer.class() == 'MSShapeGroup') {
+          var fill = layer.style().fills().firstObject();
+          fill.setFillType(4);
 
-        if (imgData) {
-          replaceImage(selectedLayers[i], imgData);        
-        } else if (imgTiffData) {
-          replaceImage(selectedLayers[i], imgTiffData);  
+          if(imgData) {
+            image = [[NSImage alloc] initWithData:imgData];
+          } else if (imgTiffData) {
+            image = [[NSImage alloc] initWithData:imgTiffData];
+          }
+          
+          fill.setImage(MSImageData.alloc().initWithImage_convertColorSpace(image, false));
+          layer.style().fills().firstObject().setPatternFillType(1);
+        } else if (layer.class() == "MSBitmapLayer") {
+          if (imgData) {
+            replaceImage(selectedLayers[i], imgData);        
+          } else if (imgTiffData) {
+            replaceImage(selectedLayers[i], imgTiffData);  
+          }
+        } else {
+          sketch.message('Selected layers cannot be replaced. Try selecting a shape or image.');
         }
+
+
       }
     } else {
       sketch.message('No image in Clipboard');
@@ -30,7 +49,6 @@ function onRun(context) {
 
   } else {
     sketch.message('Please select some objects.');
-    return;
   }
 };
 
@@ -40,7 +58,7 @@ function replaceImage(_layer, _imageData) {
   var replaceAction = MSReplaceImageAction.alloc().init();
   if (replaceAction) {
     [replaceAction applyImage:image tolayer:layer];
-    // resize image accordingly
+    // To do:resize image accordingly
     sketch.message('Replaste!');
   }
 }
