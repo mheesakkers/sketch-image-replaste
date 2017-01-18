@@ -17,7 +17,7 @@ function onRun(context) {
       for (var i = 0; i < layersCount; i++) {
         var layer = selectedLayers[i];
         var image;
-        
+
         // Check if layer is a shape or image
         if (layer.class() == 'MSShapeGroup') {
           var fill = layer.style().fills().firstObject();
@@ -31,6 +31,7 @@ function onRun(context) {
           
           fill.setImage(MSImageData.alloc().initWithImage_convertColorSpace(image, false));
           layer.style().fills().firstObject().setPatternFillType(1);
+          sketch.message('Replaste!');
         } else if (layer.class() == "MSBitmapLayer") {
           if (imgData) {
             replaceImage(selectedLayers[i], imgData);        
@@ -41,7 +42,6 @@ function onRun(context) {
           sketch.message('Selected layers cannot be replaced. Try selecting a shape or image.');
         }
 
-
       }
     } else {
       sketch.message('No image in Clipboard');
@@ -50,21 +50,14 @@ function onRun(context) {
   } else {
     sketch.message('Please select some objects.');
   }
-};
 
-function replaceImage(_layer, _imageData) {
-  var layer = _layer
-  var image = [[NSImage alloc] initWithData:_imageData];
-  var replaceAction = MSReplaceImageAction.alloc().init();
-  if (replaceAction) {
+  function replaceImage(_layer, _imageData) {
+    var layer = _layer
+    var image = [[NSImage alloc] initWithData:_imageData];
+    var replaceAction = MSReplaceImageAction.alloc().init();
     [replaceAction applyImage:image tolayer:layer];
-    // To do:resize image accordingly
     sketch.message('Replaste!');
   }
-}
 
-  // if(layer.isKindOfClass(MSBitmapLayer)) {
-  //   sketch.message('This is an image yes.');
-  // } else {
-  //   sketch.message('This only works with an image.');
-  // }
+};
+
