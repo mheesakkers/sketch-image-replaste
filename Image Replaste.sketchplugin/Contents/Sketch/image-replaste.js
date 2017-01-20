@@ -13,6 +13,8 @@ function onRun(context) {
     var imgData = pasteBoard.dataForType(NSPasteboardTypePNG);
     var imgTiffData = pasteBoard.dataForType(NSPasteboardTypeTIFF);
 
+    // sketch.message('Count: ' + pasteBoard.pasteBoardItems.count());
+
     if (imgData || imgTiffData) {
       for (var i = 0; i < layersCount; i++) {
         var layer = selectedLayers[i];
