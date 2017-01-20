@@ -1,3 +1,4 @@
+<img height="64" width="64" src="https://github.com/mheesakkers/sketch-image-replaste/blob/master/Image%20Replaste.sketchplugin/Contents/Resources/icon.png">
 # Sketch Image Replaste (WIP)
 
 A simple Sketch plugin for replacing images with a copied image of your clipboard.
