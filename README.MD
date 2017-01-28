@@ -1,4 +1,4 @@
-<img height="64" width="64" src="https://github.com/mheesakkers/sketch-image-replaste/blob/master/Image%20Replaste.sketchplugin/Contents/Resources/icon-large.png">
+<img height="128" width="128" src="https://github.com/mheesakkers/sketch-image-replaste/blob/master/Image%20Replaste.sketchplugin/Contents/Resources/icon-large.png">
 # Sketch Image Replaste (WIP)
 
 A simple Sketch plugin for replacing images with a copied image of your clipboard.
@@ -32,6 +32,13 @@ A simple Sketch plugin for replacing images with a copied image of your clipboar
 2. Select one or multiple (image)layers that you want to replace
 3. Hit CMD + SHIFT + Y
 4. Boom! Your image got replaced with your copied image 😎
+
+---
+
+##Inspired by
+
+[Clipboard-Fill](https://github.com/ScottSavarie/Clipboard-Fill) by Scott: [@ScottSavarie](https://www.twitter.com/scottsavarie)
+Stijn: [@StijnEversdijk](https://www.twitter.com/StijnEversdijk)
 
 ---
 
