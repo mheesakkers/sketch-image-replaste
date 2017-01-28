@@ -8,12 +8,10 @@ function onRun(context) {
   
   if (layersCount > 0) {
     
-    var pasteBoard = NSPasteboard.generalPasteboard();
-    var pasteBoardItems = pasteBoard.pasteBoardItems;
-    var imgData = pasteBoard.dataForType(NSPasteboardTypePNG);
-    var imgTiffData = pasteBoard.dataForType(NSPasteboardTypeTIFF);
-
-    // sketch.message('Count: ' + pasteBoard.pasteBoardItems.count());
+    var pasteboard = NSPasteboard.generalPasteboard();
+    var pasteboardItems = pasteboard.pasteboardItems;
+    var imgData = pasteboard.dataForType(NSPasteboardTypePNG);
+    var imgTiffData = pasteboard.dataForType(NSPasteboardTypeTIFF);
 
     if (imgData || imgTiffData) {
       for (var i = 0; i < layersCount; i++) {
