@@ -9,11 +9,7 @@ A simple Sketch plugin for replacing images with a copied image of your clipboar
 ##To do
 
 - Check if ONLY one image is copied to the clipboard
-- Testing
-- Add to Sketch Toolbox
-- ~~If layer is not an image but a shape => fill the layer with the copied image~~
-- ~~Bug: Multiple selected image only one get replaced~~
-- ~~SketchRunner integration~~
+- Testing / Gather feedback
 
 ##Installation
 
