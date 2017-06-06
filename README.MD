@@ -4,7 +4,7 @@
 
 A simple Sketch plugin for replacing images with a copied image of your clipboard.
 
-<img src="http://misha.studio/image-replaste/screencast-sketch-image-replaste.gif" alt="img" style="max-width:100%;">
+<img src="https://www.misha.studio/image-replaste/images/screencast.gif" alt="img" style="max-width:100%;">
 ---
 
 ## To do
