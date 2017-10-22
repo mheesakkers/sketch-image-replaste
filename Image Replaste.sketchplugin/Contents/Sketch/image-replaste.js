@@ -29,7 +29,12 @@ function onRun(context) {
             image = [[NSImage alloc] initWithData:imgTiffData];
           }
           
-          fill.setImage(MSImageData.alloc().initWithImage_convertColorSpace(image, false));
+          if (MSApplicationMetadata.metadata().appVersion < 47) {
+            fill.setImage(MSImageData.alloc().initWithImage_convertColorSpace(image, false));
+          }
+          else {
+            fill.setImage(MSImageData.alloc().initWithImage(image));
+          }
           layer.style().fills().firstObject().setPatternFillType(1);
           sketch.message('Replaste!');
         } else if (layer.class() == "MSBitmapLayer") {
@@ -48,15 +53,15 @@ function onRun(context) {
     }
 
   } else {
-    sketch.message('Please select some objects.');
+    sketch.message('Please select some layers.');
   }
 
   function replaceImage(_layer, _imageData) {
+    sketch.message('Replaste!');
     var layer = _layer
     var image = [[NSImage alloc] initWithData:_imageData];
     var replaceAction = MSReplaceImageAction.alloc().init();
     [replaceAction applyImage:image tolayer:layer];
-    sketch.message('Replaste!');
   }
 
 };
