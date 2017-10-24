@@ -11,6 +11,7 @@ A simple Sketch plugin for replacing images with a copied image of your clipboar
 
 - Check if ONLY one image is copied to the clipboard
 - Testing / Gather feedback
+- Set clipboard image dimensions as the initial image - resize
 
 ## Installation
 
