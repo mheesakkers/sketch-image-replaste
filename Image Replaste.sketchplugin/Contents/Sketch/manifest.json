@@ -5,6 +5,7 @@
     "description" : "Replace your image with your pasteboard image",
     "authorEmail" : "misha.heesakkers@gmail.com",
     "author" : "Misha Heesakkers",
+    "icon" : "icon.png"
     "commands" : [
     {
       "script" : "image-replaste.js",
