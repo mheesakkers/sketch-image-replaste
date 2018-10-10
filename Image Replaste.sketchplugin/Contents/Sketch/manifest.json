@@ -6,6 +6,7 @@
     "authorEmail" : "misha.heesakkers@gmail.com",
     "author" : "Misha Heesakkers",
     "icon" : "icon.png",
+    "appcast" : "https://raw.githubusercontent.com/mheesakkers/sketch-image-replaste/master/appcast.xml",
     "commands" : [
     {
       "script" : "image-replaste.js",

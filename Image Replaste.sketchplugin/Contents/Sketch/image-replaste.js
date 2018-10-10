@@ -18,8 +18,9 @@ function onRun(context) {
         var layer = selectedLayers[i];
         var image;
 
+        log(layer.class())
         // Check if layer is a shape or image
-        if (layer.class() == 'MSShapeGroup') {
+        if ( isShapeLayer(layer) ) {
           var fill = layer.style().fills().firstObject();
           fill.setFillType(4);
 
@@ -65,4 +66,25 @@ function onRun(context) {
   }
 
 };
+
+function isShapeLayer (_layer) {
+  if (_layer.class() == 'MSRectangleShape') {
+    return true;
+  }
+  if (_layer.class() == 'MSOvalShape') {
+    return true;
+  }
+  if (_layer.class() == 'MSPolygonShape') {
+    return true;
+  }
+  if (_layer.class() == 'MSStarShape') {
+    return true;
+  }
+  if (_layer.class() == 'MSShapePathLayer') {
+    return true;
+  }
+  if (_layer.class() == 'MSTriangleShape') {
+    return true;
+  }
+}
 
