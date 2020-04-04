@@ -6,6 +6,11 @@
     <description>Replace your image with your pasteboard image.</description>
     <language>en</language>
     <item>
+      <title>Version 1.1</title>
+      <description>Update shortcut to CMD + CTRL + I due to shortcut change of Sketch Symbols</description>
+      <enclosure url="https://github.com/mheesakkers/sketch-image-replaste/archive/master.zip" sparkle:version="1.1"/>
+    </item>
+    <item>
       <title>Version 1.0</title>
       <description>
         <![CDATA[

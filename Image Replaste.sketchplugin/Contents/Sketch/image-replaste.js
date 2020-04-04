@@ -87,4 +87,3 @@ function isShapeLayer (_layer) {
     return true;
   }
 }
-
